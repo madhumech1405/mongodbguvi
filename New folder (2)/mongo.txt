@@ -1,0 +1,109 @@
+1)db.guvitesk.find({});
+db.guvitesk.find({"product_price":{$gte:400,$lte:800}});
+{
+  _id: ObjectId("6560c5b840f7a92ea9d3e479"),
+  id: '1',
+  product_name: 'Intelligent Fresh Chips',
+  product_price: 655,
+  product_material: 'Concrete',
+  product_color: 'mint green'
+}
+{
+  _id: ObjectId("6560c5b840f7a92ea9d3e47b"),
+  id: '3',
+  product_name: 'Refined Steel Car',
+  product_price: 690,
+  product_material: 'Rubber',
+  product_color: 'gold'
+}
+
+{
+  _id: ObjectId("6560c5b840f7a92ea9d3e47e"),
+  id: '6',
+  product_name: 'Awesome Wooden Towels',
+  product_price: 474,
+  product_material: 'Plastic',
+  product_color: 'orange'
+}
+{
+  _id: ObjectId("6560c5b840f7a92ea9d3e47f"),
+  id: '7',
+  product_name: 'Practical Soft Shoes',
+  product_price: 500,
+  product_material: 'Rubber',
+  product_color: 'pink'
+}
+4.db.guvitesk.find({"product_price":{$gt:500}}).limit(4);
+{
+  _id: ObjectId("6560c5b840f7a92ea9d3e479"),
+  id: '1',
+  product_name: 'Intelligent Fresh Chips',
+  product_price: 655,
+  product_material: 'Concrete',
+  product_color: 'mint green'
+}
+{
+  _id: ObjectId("6560c5b840f7a92ea9d3e47a"),
+  id: '2',
+  product_name: 'Practical Fresh Sausages',
+  product_price: 911,
+  product_material: 'Cotton',
+  product_color: 'indigo'
+}
+{
+  _id: ObjectId("6560c5b840f7a92ea9d3e47b"),
+  id: '3',
+  product_name: 'Refined Steel Car',
+  product_price: 690,
+  product_material: 'Rubber',
+  product_color: 'gold'
+}
+6.db.guvitesk.findOne({"id":"10"});
+{
+  _id: ObjectId("6560c5b840f7a92ea9d3e482"),
+  id: '10',
+  product_name: 'Generic Wooden Pizza',
+  product_price: 84,
+  product_material: 'Frozen',
+  product_color: 'indigo'
+}
+5.db.guvitesk.find({},{"product_name":1, "product_material":1,"_id":0});
+{
+  product_name: 'Intelligent Fresh Chips',
+  product_material: 'Concrete'
+}
+{
+  product_name: 'Practical Fresh Sausages',
+  product_material: 'Cotton'(only two field for copies is data etc... iam not copy but command or query is correct)
+}
+7.db.guvitesk.find({"id":"1"},{"product_name":1, "product_material":1,"_id":0});
+{
+  product_name: 'Intelligent Fresh Chips',
+  product_material: 'Concrete'
+}
+8.{
+  _id: ObjectId("6560c5b840f7a92ea9d3e481"),
+  id: '9',
+  product_name: 'Awesome Wooden Ball',
+  product_price: 28,
+  product_material: 'Soft',
+  product_color: 'azure'
+}
+{
+  _id: ObjectId("6560c5b840f7a92ea9d3e483"),
+  id: '11',
+  product_name: 'Unbranded Wooden Cheese',
+  product_price: 26,
+  product_material: 'Soft',
+  product_color: 'black'
+}
+{
+  _id: ObjectId("6560c5b840f7a92ea9d3e48b"),
+  id: '19',
+  product_name: 'Intelligent Cotton Chips',
+  product_price: 46,
+  product_material: 'Soft',
+  product_color: 'azure'
+}
+db.guvitesk.find({ "product_color": "indigo", "product_price": 492.00 });
+db.guvitesk.remove({"product_price":{$eq:492.00}},{justone:false});
